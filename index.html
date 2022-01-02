@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+    </style>
+    <title>Formulaire HTML</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Formulaire HTML</h1>
+            <p>Voici ma page Web pour le brief "Formulaire HTML".</p>
+        </section>    
+    </header>
+
+    <form>
+        <!-- infos perso -->
+        <label for="Prenom" value="Votre Prénom">Prénom :</label><br>
+        <input type="text" id="Prenom" title="Veuillez renseigner votre Prenom." required><br>
+
+        <label for="Nom">Nom :</label><br>
+        <input type="text" id="Nom" title="Veuillez renseigner votre Nom." required><br>
+
+        <label for="Age">Age :</label><br>
+        <input type="number" id="Age" min="18" max="150" title="Veuillez renseigner votre Age (Vous devez avoir Minimum 18ans)." required><br>
+
+        <label for="date-de-naissance">Date de Naissance :</label><br>
+        <input type="date" id="date-de-naissance" value="2010-01-01" required><br>
+
+        <label for="Sexe">Sexe :</label><br>
+        <select id="Sexe" title="Veuillez renseigner votre Sexe." required>
+            <option value="">--Selectionner une Réponse--</option>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Hélicoptère Apache">Hélicoptère Apache</option>
+            <option value="Ne pas spécifié">Ne pas spécifier</option>
+        </select><br>
+
+        <label for="adresse">Adresse</label><br>
+        <input type="text" id="adresse" title="Veuillez renseigner votre Adresse." required><br>
+
+        <label for="cp">Code Postale :</label><br>
+        <input type="text" id="cp" maxlength="5" pattern="[0-9]{5,}" title="Veuillez renseigner votre Code Postale à 5 chiffres." required><br>
+
+        <label for="ville">Ville :</label><br>
+        <input type="text" id="ville" title="Veuillez renseigner votre ville." required><br>
+
+        <br>
+
+        <label for="email">Adresse Mail :</label><br>
+        <input type="email" id="email" title="Veuillez renseigner un Email valide." required><br>
+
+
+        <label for="metier">Métier Exercé :</label><br>
+        <select id="metier" required>
+            <option value="">--Selectionner une Réponse--</option>
+            <option value="Fonctionnaire">Fonctionnaire</option>
+            <option value="Developpeur">Developpeur</option>
+            <option value="Autre">Autre</option>
+        </select><br>
+
+        <br>
+
+        <!-- Nationnalité -->
+
+        <label for="nationnalité">Nationnalité :</label><br>
+        <select id="nationnalité" required>
+            <option selected="selected">Française</option>
+            <option value="Belge">Belge</option>
+            <option value="Espagnole">Espagnole</option>
+            <option value="Autre">Autre</option>
+        </select><br>
+
+        <label for="pays-naissance">Pays de Naissance :</label><br>
+        <select id="pays-naissance" required>
+            <option selected="selected">France</option>
+            <option value="Belgique">Belgique</option>
+            <option value="Espagne">Espagne</option>
+            <option value="Autre">Autre</option>
+        </select><br>
+
+        <br>
+        
+        <!-- Securité sociale -->
+
+        <label for="securite-sociale">N° de sécurité sociale :</label><br>
+        <input id="securite-sociale" type="text"  minlength="13" maxlength="13" size="20" title="Veuillez renseigner un numéro de 13 caractères." pattern="[0-9]{13}" required><br>
+        
+        <br>
+
+        <!-- PassePort -->
+
+        <label for="passeport">N° de passeport : </label>
+        <input id="passeport" type="text" minlength="9" maxlength="9" title="Veuillez renseigner un numéro de 9 caractères (ex: 11AB11111)" pattern="[0-9]{2,}[a-z]{2,}[0-9]{5,}" required><br>
+
+        <label for="delivrance-passeport">Date de délivrance : </label>
+        <input type="date" id="delivrance-passeport" value="2010-01-01"><br>
+
+        <label for="validité-passeport">Date de validité : </label>
+        <input type="date" id="validité-passeport" value="2010-01-01"><br>
+
+        <br><input type="submit">
+    </form>
+    
+</body>
+</html>
